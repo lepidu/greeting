@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<body>
+	
+	                <form method="post"  action="#" th:action="@{/greeting}" th:object="${greeting}">
+	                   
+	                    <div id="middle-wizard">
+	                        <div class="step">
+	                            <h2 class="section_title">Wedding Enquire</h2>
+	                            <h3 class="main_question">Personal info</h3>
+	                            <div class="form-group add_top_30">
+	                                <label for="name">Full Name</label>
+	                                <input type="text"  th:field="*{name}" />
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="email">Email Address</label>
+	                                <input type="text" th:field="*{address}" />
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="phone">Phone</label>
+	                                <input type="text"  th:field="*{phone}" />
+	                            </div>
+								<div class="form-group">
+	                                <label for="phone">Wedding date</label>
+	                                <input type="text" th:field="*{date}"/>
+	                            </div>
+								<div class="form-group">
+	                                <label for="phone">Where you find us</label>
+	                                <input type="text" th:field="*{find_us}"/>
+	                            </div>
+								<div class="form-group">
+	                                <label for="phone">Message</label>
+	                                <textarea type="text" th:field="*{msg}"> </textarea>
+	                            </div>
+
+								<p><input type="submit" value="Submit" class="btn_1 add_bottom_15" id="submit-contact" /></p>
+								<input type="reset" value="Reset" />
+	                        </div>
+        
+	                </form>
+
+</body>
+</html>
